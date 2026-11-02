@@ -1,6 +1,16 @@
 # Idiot Summary — AI-Powered Chrome Extension
 
+<p align="center">
+  <img src="public/icons/icon-128.png" alt="Idiot Summary icon" width="96" />
+</p>
+
 > **"Explain anything on the internet like I'm a complete beginner over a warm cup of chai."**
+
+| | |
+|---|---|
+| Chrome Web Store listing draft | [docs/STORE_LISTING.md](docs/STORE_LISTING.md) |
+| Architecture deep dive | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+| Manual testing checklist | [docs/MANUAL_TESTING.md](docs/MANUAL_TESTING.md) |
 
 **Idiot Summary** is a production-quality Chrome Extension built using **Manifest V3**, **TypeScript**, **React**, **Vite**, and **Tailwind CSS**. It transforms complicated, dense, and jargon-heavy webpages into structured, crystal-clear explanations that anyone can understand in under 60 seconds.
 
@@ -63,7 +73,7 @@ Switch modes on the fly without re-extracting page content:
 
 ### Option A: Download the Pre-built Zip (Easiest — No Build Required)
 
-1. Download **`idiot-summary-chrome-v1.1.0.zip`** from the [Releases page](../../releases) of this repository (a copy is also kept in the repo root).
+1. Download **`idiot-summary-chrome-v1.2.0.zip`** from the [Releases page](../../releases) of this repository (a copy is also kept in the repo root).
 2. Unzip it — you get an `idiot-summary` folder containing `manifest.json`.
 3. Open **Google Chrome** and navigate to:
    ```
@@ -104,7 +114,7 @@ This runs TypeScript validation, compiles the HTML pages (`popup.html`, `sidepan
 ```bash
 npm run package:zip
 ```
-Builds the extension and produces `idiot-summary-chrome-v1.1.0.zip` in the project root — the same format distributed via Releases.
+Builds the extension and produces `idiot-summary-chrome-v1.2.0.zip` in the project root — the same format distributed via Releases.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "idiot-summary",
-  "version": "1.1.0",
-  "description": "Idiot Summary - AI-Powered Chrome Extension that explains anything like you're a complete beginner",
+  "version": "1.2.0",
+  "description": "Explain any webpage or PDF like you're a complete beginner — structured, jargon-free AI summaries.",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "generate-icons": "node scripts/generate-icons.js",
-    "package:zip": "npm run build && rm -rf .package-tmp idiot-summary-chrome-v1.1.0.zip && mkdir -p .package-tmp/idiot-summary && cp -R dist/. .package-tmp/idiot-summary/ && (cd .package-tmp && zip -rq ../idiot-summary-chrome-v1.1.0.zip idiot-summary) && rm -rf .package-tmp"
+    "package:zip": "npm run build && rm -rf .package-tmp idiot-summary-chrome-v1.2.0.zip && mkdir -p .package-tmp/idiot-summary && cp -R dist/. .package-tmp/idiot-summary/ && (cd .package-tmp && zip -rq ../idiot-summary-chrome-v1.2.0.zip idiot-summary) && rm -rf .package-tmp"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",
