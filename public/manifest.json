@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "Idiot Summary",
+  "version": "1.1.0",
+  "description": "Explain anything on the internet like you're a complete beginner over a warm cup of chai.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "Idiot Summary"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "sidePanel",
+    "scripting",
+    "contextMenus",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://integrate.api.nvidia.com/*",
+    "https://openrouter.ai/*",
+    "https://arxiv.org/*",
+    "https://*.arxiv.org/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Open Idiot Summary"
+    }
+  }
+}

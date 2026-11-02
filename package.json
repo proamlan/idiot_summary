@@ -1,0 +1,41 @@
+{
+  "name": "idiot-summary",
+  "version": "1.1.0",
+  "description": "Idiot Summary - AI-Powered Chrome Extension that explains anything like you're a complete beginner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/build-scripts.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "generate-icons": "node scripts/generate-icons.js",
+    "package:zip": "npm run build && rm -rf .package-tmp idiot-summary-chrome-v1.1.0.zip && mkdir -p .package-tmp/idiot-summary && cp -R dist/. .package-tmp/idiot-summary/ && (cd .package-tmp && zip -rq ../idiot-summary-chrome-v1.1.0.zip idiot-summary) && rm -rf .package-tmp"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "lucide-react": "^0.475.0",
+    "pdfjs-dist": "^6.5.438",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/chrome": "^0.0.308",
+    "@types/jsdom": "^21.1.7",
+    "@types/mozilla-readability": "^0.2.1",
+    "@types/node": "^22.13.4",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}
